@@ -1,5 +1,7 @@
 import "./sideRight.css"
 import { BsFillMegaphoneFill, BsPersonHearts, BsCalendarEvent, BsImages, BsFire } from "react-icons/bs";
+import { Users } from "../../dummyData";
+import Friends from "../friends/Friends";
 
 export default function SideRight() {
   return (
@@ -30,7 +32,7 @@ export default function SideRight() {
             <button className="sideRightButton">You can't hide</button>
             <hr className="sideRightHr" />
             <ul className="sideRightFriends">
-                  {User.map((u) => (
+                  {Users.map((u) => (
                     <Friends key={u.id} user={u} />
                   ))}              
             </ul>
