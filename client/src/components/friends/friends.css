@@ -1,0 +1,17 @@
+.sideRightFriend{
+    display: flex;
+    align-items: center;
+    margin: 16px 0;
+    padding: 8px 16px;
+    color: #DECC2D;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.sideRightFriendImg{
+    height: 64px;
+    width: 64px;
+    border-radius: 25%;
+    object-fit: cover;
+    margin-right: 16px;
+}

@@ -1,0 +1,76 @@
+.sideRightShroud{
+    flex: 0 0 20%;
+    height: 90%;
+    background-color: #2D5771;
+    position: sticky
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #9ad6fc;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a0b8c9;
+}
+
+.rightCloak{
+    padding: auto 16px;
+}
+
+.sideRightMenu{
+    padding: auto;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.sideRightMenuItem{
+    display: flex;
+    align-items: center;
+    color: #DECC2D;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 8px 16px;
+}
+
+.sideRightMenuItem:hover{
+    background-color: #DECC2D;
+    color: #2D5771;
+}
+
+.sideRightIcon{
+    margin-right: 16px;
+}
+
+.sideRightButton{
+    padding: 8px;
+    margin-left: 32px;
+    border: none;
+    width: 176px;
+    border-radius: 16px;
+    background-color: #DECC2D;
+    color: #561D55;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.sideRightButton:hover{
+    background-color: #2D5771;
+    color: #DECC2D;
+}
+
+.sideRightHr{
+    margin: 16px 0;
+}
+
+.sideRightFriends{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+

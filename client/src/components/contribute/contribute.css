@@ -1,0 +1,110 @@
+.contributeShroud {
+  height: 75%;
+  width: 98%;
+  border-radius: 8px;
+  background-color: #2D5771;
+  -webkit-box-shadow: 16px 8px 16px 8px #b5f2cd;
+  box-shadow: 16px 8px 16px 8px #b5f2cd;
+  margin: 16px 0;
+}
+
+.contributeCloak {
+  padding: 8px;
+}
+
+.contributeAbove {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contributeAboveLeft {
+  display: flex;
+  align-items: center;
+}
+
+.contributeProfImg {
+  height: 48px;
+  width: 48px;
+  border-radius: 25%;
+  object-fit: cover;
+  margin-right: 8px;
+}
+
+.contributeUsername{
+    font-size: 24px;
+    font-weight: 500;
+    color: #decc2d;
+}
+
+.contributeDate{
+    display: flex;
+    font-size: 16px;
+    font-weight: 300;
+    color: #decc2d;
+}
+
+.contributeCenter{
+    margin: 16px 0;
+}
+
+.contributeImg{
+    margin: 16px;
+    max-height: 600px;
+    width: 90%;
+    object-fit: contain;
+}
+
+.contributeBelow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contributeBelowRight{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contributeSelectionIcon{
+    font-size: 24px;
+    margin-right: 4px;
+    color: #decc2d;
+}
+
+.contributeSelections{
+    display: flex;
+}
+
+.contributeSelection{
+    margin: 4px 16px;
+    display: flex;
+
+}
+
+.contributeCommentsCount{
+    font-size: 24px;
+    font-weight: 500;
+    color: #decc2d;
+}
+
+.contributeText{
+    border: none;
+    font-size: 24px;
+    font-weight: 500;
+    color: #decc2d;
+    width: 90%;    
+}
+
+.contributeSelectionText{
+    font-size: 24px;
+    font-weight: 500;
+    color: #561D55;
+}
+
+.contributeIcon{
+    height: 48px;
+    width: 48px;
+    color: #561D55;
+}

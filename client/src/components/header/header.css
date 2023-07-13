@@ -1,0 +1,110 @@
+.headerShroud{
+    height: 96px;
+    width: 100%;
+    background-color: #24506E;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    z-index: 16;
+    top: 0;    
+}
+
+.headerLeft{
+    flex: 0 0 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.headerIcons{
+    display: flex;
+}
+
+.headerIcon:hover{
+    color: #561D55;
+}
+
+.headerIcon{
+    height: 32px;
+    width: 32px;
+    margin: 0 8px;
+    position: relative;
+    color: #B5F2CD;
+}
+
+.headerIconFlag{
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    font-size: 12px;
+    color: #B5F2CD;
+    background-color: #561D55;
+    position: absolute;
+    top: -12px;
+    right: -2px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+
+}
+
+.headerLink:hover{
+    color: #561D55;
+}
+
+.headerLink{
+    text-decoration: none;
+    color: #B5F2CD;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 8px;   
+}
+
+.headerCenter{
+    flex: 0 0 60%;
+}
+
+.headerRight{
+    flex: 0 0 20%;
+}
+
+.headerImg{
+    height: 64px;
+    width: 64px;
+    border-radius: 25%;
+    object-fit: cover;
+    margin: 0 16px;
+}
+
+.headerLogo{
+    margin-right: 48px;
+    font-size: 48px;
+    font-weight: 700;
+    color: #B5F2CD;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.searchIcon{
+    margin-left: 8px;
+}
+
+.searchInput{
+    height: 24px;
+    width: 64%;
+    background-color: #DECC2D;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #561D55;
+}
+
+.searchBar{
+    height: 32px;
+    width: 100%;
+    background-color:#DECC2D;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+}

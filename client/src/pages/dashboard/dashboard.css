@@ -1,0 +1,53 @@
+.dashboardShroud{
+    display: flex;
+    background-color: #2D5771;
+}
+
+.dashboardRight{
+    flex: 0 0 65%;
+}
+
+.dashboardCloak{
+    height: 336px;
+    position: relative;;
+}
+
+.dashboardCoverImage{
+    height: 272px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.dashboardProfileImage{
+    height: 128px;
+    width: 128px;
+    border-radius: 25%;
+    position: absolute;
+    bottom: -64px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 4px solid #decc2d;
+}
+
+.dashboardDeets{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboardDeetsName{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.dashboardDeetsDeets{
+    font-size: 16px;
+    font-weight: 400;
+    color: #decc2d;
+}
+
+.dashboardRightBelow{
+    display: flex;
+}

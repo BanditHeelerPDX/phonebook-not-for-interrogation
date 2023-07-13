@@ -1,0 +1,74 @@
+.distributeShroud {
+  height: 240px;
+  width: 98%;
+  border-radius: 8px;
+  background-color: #decc2d;
+  -webkit-box-shadow: 16px 8px 16px 8px #b5f2cd;
+  box-shadow: 16px 8px 16px 8px #b5f2cd;
+}
+
+.distributeCloak {
+  padding: 8px;
+}
+
+.distributeProfImg {
+  height: 48px;
+  width: 48px;
+  border-radius: 25%;
+  object-fit: cover;
+  margin-right: 8px;
+}
+
+.distributeText {
+  height: 112px;
+  width: 85%;
+  background-color: #decc2d;
+  border: none;
+  color: #2d5771;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.distributeHr {
+  margin: 16px;
+}
+
+.distributeBelow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.distributeSelections {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 16px;
+}
+
+.distributeSelection {
+  margin: 0 16px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #561d55;
+  font-weight: 700;
+}
+
+.distributeSelectionIcon {
+  font-size: 24px;
+  margin-right: 4px;
+  color: #2d5771;
+}
+
+.distributeButton {
+  padding: 8px;
+  margin: 8px 32px;
+  border: none;
+  width: 176px;
+  border-radius: 16px;
+  background-color: #561d55;
+  color: #decc2d;
+  font-size: 24px;
+  font-weight: 700;
+}
