@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const UserSchema = new mongoose.Schema(
   {
-    userName: {
+    username: {
       type: String,
       required: true,
       min: 5,
@@ -27,6 +27,22 @@ const UserSchema = new mongoose.Schema(
     coverImage: {
       type: String,
       default: "",
+    },
+    desc: {
+      type: String,
+      max: 50,
+    },
+    city: {
+      type: String,
+      max: 50,
+    },
+    from: {
+      type: String,
+      max: 50,
+    },
+    dream: {
+      type: String,
+      max: 50,
     },
     friends: {
       type: Array,
