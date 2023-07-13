@@ -2,28 +2,39 @@ const router = require("express").Router();
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
 
-router.post("/signup", async (req, res) => {
+//REGISTER
+router.post("/register", async (req, res) => {
   try {
+    //generate new password
     const hashPass = await bcrypt.hash(req.body.password, 16);
-    const user = await new User({
+
+    //create new user
+    const newUser = new User({
       username: req.body.username,
       email: req.body.email,
       password: hashPass,
     });
-    const newUser = await user.save();
-    res.status(200).json(newUser);
+
+    //save user and respond
+    const user = await newUser.save();
+    res.status(200).json(user);
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
+//LOGIN
 router.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.email });
-    !user &&
-      res.status(404).json("Aint nobody running around here with that email");
-    const validPass = await bcrypt.compare(req.body.password, user.password);
-    !validPass && res.status(400).json("Double check your notes, slick");
+    !user && res.status(404).json("that user is not known to us");
+
+    const validPassword = await bcrypt.compare(
+      req.body.password,
+      user.password
+    );
+    !validPassword && res.status(400).json("double check them digis, bruv");
+
     res.status(200).json(user);
   } catch (err) {
     res.status(500).json(err);
