@@ -67,7 +67,7 @@ export default function Distribute() {
             />
           </div>
         )}
-        <div className="distributeBelow">
+        <form onSubmit={submitHandler} className="distributeBelow">
           <div className="distributeSelections">
             <label htmlFor="file" className="distributeSelection">
               <BsFolderPlus className="distributeSelectionIcon" />
@@ -94,7 +94,7 @@ export default function Distribute() {
             </div>
           </div>
           <button className="distributeButton">Sendit!</button>
-        </div>
+        </form>
       </div>
     </div>
   );

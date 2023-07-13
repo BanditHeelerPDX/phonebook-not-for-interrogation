@@ -1,0 +1,22 @@
+{
+  "name": "phonebook",
+  "version": "1.0.0",
+  "description": "Use the phonebook for something other than beating a suspect",
+  "main": "index.js",
+  "scripts": {
+    "fireitup": "concurrently \"cd api && npm start\" \"cd client && npm start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BanditHeelerPDX/phonebook-not-for-interrogation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BanditHeelerPDX/phonebook-not-for-interrogation/issues"
+  },
+  "homepage": "https://github.com/BanditHeelerPDX/phonebook-not-for-interrogation#readme",
+  "dependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
