@@ -5,16 +5,27 @@ import {
   BsFillBellFill,
 } from "react-icons/bs";
 import "./header.css";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
+import { useContext } from "react";
 
 export default function Header() {
+  const { user } = useContext(AuthContext);
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   return (
     <div className="headerShroud">
       <div className="headerLeft">
+      <Link to={`/profile/${user.username}`}>
       <img
-        src="/assets/viking.jpg"
+        src={
+          user.profilePicture
+            ? PF + user.profileImage
+            : PF + "person/noAvatar.png"
+        }
         alt="viking warrior prepares for the playground"
         className="headerImg"
       />
+      </Link>
         <div className="headerLinks">
           <span className="headerLink">Home</span>
           <span className="headerLink">Profile</span>
@@ -44,7 +55,9 @@ export default function Header() {
         </div>
       </div>
       <div className="headerRight">
+      <Link to="/" style={{ textDecoration: "none" }}>
         <span className="headerLogo">Phonebook</span>
+        </Link>
       </div>
     </div>
   );
