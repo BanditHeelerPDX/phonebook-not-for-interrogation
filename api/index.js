@@ -45,11 +45,12 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
     console.log(error);
   }
 });
+app.use(express.static(path.join(__dirname, "client", "build")));
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/posts", postRoute);
 
 app.listen(5001, () => {
-  console.log("You are now listening to smooth jazz on port 5001");
+  console.log("You are now listening to smooth jazz on port ${PORT}");
 });

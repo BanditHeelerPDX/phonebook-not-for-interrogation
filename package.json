@@ -4,7 +4,7 @@
   "description": "Use the phonebook for something other than beating a suspect",
   "main": "index.js",
   "scripts": {
-    "fireitup": "concurrently \"cd api && npm start\" \"cd client && npm start\""
+    "fireitup": "concurrently \"cd api && npm start\" \"cd client && npm run start\""
   },
   "repository": {
     "type": "git",

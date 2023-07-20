@@ -1,8 +1,9 @@
 export const Users = [
   {
-    id: 1,
+    id: 11,
     username: "FrankStallone",
     email: "frank@stallone.com",
+    password: "123123123123",
     profileImage: "person/viking.jpg",
     coverImage: "post/1.jpg",
     desc: "I'm a viking - I plunder",

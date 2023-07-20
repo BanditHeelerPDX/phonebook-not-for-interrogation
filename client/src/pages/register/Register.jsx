@@ -21,7 +21,7 @@ export default function Register() {
         password: password.current.value,
       };
       try {
-        await axios.post("/auth/register", user);
+        await axios.post("/api/auth/register", user);
         history.push("/login");
       } catch (err) {
         console.log(err);
@@ -64,8 +64,8 @@ export default function Register() {
               type="password"
               className="loginInput"
             />
-            <button className="loginButton">Pick up the phonebook</button>
-            <button className="loginRegisterButton" type="submit">
+            <button type="submit" className="loginButton">Pick up the phonebook</button>
+            <button className="loginRegisterButton">
               Already in the book?
             </button>
           </form>
