@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { setContext } from "@apollo/client/link/context";
 import {
   ApolloProvider,
@@ -12,6 +12,7 @@ import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import Dashboard from "./pages/dashboard/Dashboard";
+import Header from "./components/header/Header";
 
 const httpLink = createHttpLink({
   uri: "http://localhost:5001/graphql",
@@ -36,12 +37,13 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <Switch>
-          <Route path="/" element={Home} />
-          <Route path="/login" element={Login} />
-          <Route path="/register" element={Register} />
-          <Route path="/dashboard" element={Dashboard} />
-        </Switch>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
       </Router>
     </ApolloProvider>
   );

@@ -1,33 +1,42 @@
 import "./register.css";
-import axios from "axios";
-import { useRef } from "react";
-import { useHistory } from "react-router";
+import { CREATE_USER } from "../../utils/mutations";
+import React, { useState } from "react";
+import { useMutation } from "@apollo/client";
+import auth from "../../utils/auth";
 
 export default function Register() {
-  const username = useRef();
-  const email = useRef();
-  const password = useRef();
-  const passwordAgain = useRef();
-  const history = useHistory();
-
-  const handleClick = async (e) => {
-    e.preventDefault();
-    if (passwordAgain.current.value !== password.current.value) {
-      passwordAgain.current.setCustomValidity("Passwords don't match!");
-    } else {
-      const user = {
-        username: username.current.value,
-        email: email.current.value,
-        password: password.current.value,
-      };
-      try {
-        await axios.post("/api/auth/register", user);
-        history.push("/login");
-      } catch (err) {
-        console.log(err);
-      }
-    }
+  const [formState, setFormState] = useState({
+    username: "",
+    email: "",
+    password: "",
+    passwordAgain: "",
+  });
+  const [createUser, { error, data }] = useMutation(CREATE_USER);
+  const handleChange = (event) => {
+    const { username, value } = event.target;
+    setFormState({
+      ...formState,
+      [username]: value,
+    });
   };
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    console.log(formState);
+    // if (formState.password !== formState.passwordAgain) {
+    //   alert("Passwords do not match.");
+    // } else {
+      try {
+        const { data } = await createUser({
+          variables: { ...formState },
+        });
+
+        auth.login(data.createUser.token);
+      } catch (e) {
+        console.error(e);
+      }
+    };
+
   return (
     <div className="loginShroud">
       <div className="loginCloak">
@@ -36,23 +45,26 @@ export default function Register() {
           <span className="loginInfo">Not good for interrogations.</span>
         </div>
         <div className="loginRight">
-          <form className="loginBin" onSubmit={handleClick}>
+          <form className="loginBin" onSubmit={handleFormSubmit}>
             <input
               placeholder="Username"
               required
-              ref={username}
+              value={formState.username}
+              onChange={handleChange}
               className="loginInput"
             />
             <input
               placeholder="Email"
               required
-              ref={email}
+              value={formState.email}
+              onChange={handleChange}
               className="loginInput"
             />
             <input
               placeholder="Password"
               required
-              ref={password}
+              value={formState.password}
+              onChange={handleChange}
               type="password"
               minLength="10"
               className="loginInput"
@@ -60,7 +72,8 @@ export default function Register() {
             <input
               placeholder="Password Again"
               required
-              ref={passwordAgain}
+              value={formState.passwordAgain}
+              onChange={handleChange}
               type="password"
               className="loginInput"
             />
@@ -73,4 +86,4 @@ export default function Register() {
       </div>
     </div>
   );
-}
+};

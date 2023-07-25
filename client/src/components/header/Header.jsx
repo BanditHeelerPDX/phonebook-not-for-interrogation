@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <div className="headerShroud">
       <div className="headerLeft">
-      <Link to={`/profile/${user.username}`}>
+      <Link to={`/dashboard/${user.username}`}>
       <img
         src={
           user.profilePicture
