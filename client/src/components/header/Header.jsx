@@ -15,10 +15,10 @@ export default function Header() {
   return (
     <div className="headerShroud">
       <div className="headerLeft">
-      <Link to={`/dashboard/${user.username}`}>
+      <Link to={`/dashboard/${user.userName}`}>
       <img
         src={
-          user.profilePicture
+          user.profileImage
             ? PF + user.profileImage
             : PF + "person/noAvatar.png"
         }
